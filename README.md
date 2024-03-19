@@ -1,5 +1,6 @@
 
 # EncryptXpert
+### An app for file encryption/decryption using AES-EAX or AES-GCM algorithms With GUI & CLI support and Build-in Key Database System. 
 
 EncryptXpert is a cutting-edge cybersecurity tool crafted in Python, delivering a comprehensive suite of features for safeguarding sensitive data. With both Graphical User Interface (GUI) and Command-Line Interface (CLI) support, EncryptXpert empowers users to encrypt and decrypt files effortlessly using advanced AES-EAX or AES-GCM algorithms.
 
