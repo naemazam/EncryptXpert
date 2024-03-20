@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>786</width>
+    <height>608</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>786</width>
+    <height>608</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>EX</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>461</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="encrypt_form">
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
+     <item row="1" column="0">
+      <widget class="QLabel" name="enc_key_label">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="text">
+        <string>Key (B):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QProgressBar" name="enc_files_counter_progressBar">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>true</bool>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="textDirection">
+        <enum>QProgressBar::TopToBottom</enum>
+       </property>
+       <property name="format">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSpinBox" name="key_gen_bits">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="suffix">
+        <string>bits</string>
+       </property>
+       <property name="minimum">
+        <number>128</number>
+       </property>
+       <property name="maximum">
+        <number>256</number>
+       </property>
+       <property name="singleStep">
+        <number>64</number>
+       </property>
+       <property name="value">
+        <number>256</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="3">
+      <widget class="QLineEdit" name="enc_key_input">
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="maxLength">
+        <number>32767</number>
+       </property>
+       <property name="placeholderText">
+        <string>Type your key in bytes format (example: Azam123)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="3">
+      <widget class="QPushButton" name="enc_button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Encrypt</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2" colspan="2">
+      <widget class="QProgressBar" name="enc_progressBar">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>true</bool>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="textDirection">
+        <enum>QProgressBar::TopToBottom</enum>
+       </property>
+       <property name="format">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>461</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="decrypt_form">
+     <property name="horizontalSpacing">
+      <number>6</number>
+     </property>
+     <property name="verticalSpacing">
+      <number>0</number>
+     </property>
+     <item row="2" column="0">
+      <widget class="QLabel" name="dec_nonce_label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Nonce:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="dec_key_input">
+       <property name="placeholderText">
+        <string>Type your key in Hex format (example: 736563726574313233)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QPushButton" name="dec_button">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Decrypt</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="dec_key_label">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Key (H):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLineEdit" name="dec_nonce_input">
+       <property name="placeholderText">
+        <string>Type your nonce in Hex format (example: 736563726574313233)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QProgressBar" name="dec_files_counter_progressBar">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="format">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QProgressBar" name="dec_progressBar">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>true</bool>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="textDirection">
+        <enum>QProgressBar::TopToBottom</enum>
+       </property>
+       <property name="format">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="EX_LOGO">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>451</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>images/Logo.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Decrypt_form_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>300</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="load_file_folder_button">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load File(s)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Encrypt_form_label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Encrypt</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="Logger">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>751</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string/>
+    </property>
+    <property name="backgroundVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>461</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>150</y>
+      <width>461</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_3">
+    <property name="geometry">
+     <rect>
+      <x>493</x>
+      <y>30</y>
+      <width>20</width>
+      <height>411</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DB_shortcut_label">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>40</y>
+      <width>21</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>DB:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="DB_shortcut_value">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>40</y>
+      <width>251</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>$DB_NAME</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cur_file_shortcut_value">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>60</y>
+      <width>171</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>$CUR_FILE</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Cur_file_shortcut_label">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>60</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Current Enc/Dec File:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Enc_system_label">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>89</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>$Enc_SYSTEM</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::NoTextInteraction</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>786</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuDB_settings">
+     <property name="title">
+      <string>DB Settings</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/keys_DB_logo.png</normaloff>images/keys_DB_logo.png</iconset>
+     </property>
+     <addaction name="option_New_DB"/>
+     <addaction name="separator"/>
+     <addaction name="option_Import_DB_file"/>
+     <addaction name="separator"/>
+     <addaction name="option_Store_key_nonce_in_DB"/>
+     <addaction name="option_Check_for_dublicate_key_nonce_in_DB"/>
+     <addaction name="separator"/>
+     <addaction name="option_Delete_key_nonce_after_decryption"/>
+     <addaction name="option_not_verified_keep_key_nonce_DB"/>
+    </widget>
+    <widget class="QMenu" name="menuMain_Settings">
+     <property name="tearOffEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Main Settings</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/main_settings_logo.jpg</normaloff>images/main_settings_logo.jpg</iconset>
+     </property>
+     <addaction name="option_Check_for_Updates"/>
+     <addaction name="option_Check_Update_on_program_startup"/>
+     <addaction name="separator"/>
+     <addaction name="option_Delete_original_file"/>
+     <addaction name="option_not_decrypted_verified_keep_original_file"/>
+     <addaction name="separator"/>
+     <addaction name="option_Blocks_Size"/>
+    </widget>
+    <addaction name="menuMain_Settings"/>
+    <addaction name="separator"/>
+    <addaction name="menuDB_settings"/>
+    <addaction name="separator"/>
+    <addaction name="option_Save_Settings"/>
+    <addaction name="separator"/>
+    <addaction name="option_Feedback"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <action name="option_Import_DB_file">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/import_DB.png</normaloff>images/import_DB.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import DB file...</string>
+   </property>
+  </action>
+  <action name="option_Delete_key_nonce_after_decryption">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/delete_key_nonce_DB.png</normaloff>images/delete_key_nonce_DB.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete key/nonce after decryption</string>
+   </property>
+  </action>
+  <action name="option_Check_for_Updates">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/pngkey.com-refresh-png-2424713.png</normaloff>images/pngkey.com-refresh-png-2424713.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check Update</string>
+   </property>
+  </action>
+  <action name="option_Store_key_nonce_in_DB">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/save_key_nonce_DB_logo.png</normaloff>images/save_key_nonce_DB_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Store key/nonce after encryption</string>
+   </property>
+  </action>
+  <action name="option_Check_for_dublicate_key_nonce_in_DB">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/check_duplicate_key_nonce_DB.png</normaloff>images/check_duplicate_key_nonce_DB.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check for dublicate key/nonce</string>
+   </property>
+  </action>
+  <action name="option_Check_Update_on_program_startup">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Auto Check Update on Startup</string>
+   </property>
+  </action>
+  <action name="option_Save_Settings">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/save_settings_logo.png</normaloff>images/save_settings_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Settings</string>
+   </property>
+  </action>
+  <action name="option_Blocks_Size">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/ram_logo.png</normaloff>images/ram_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Usable RAM</string>
+   </property>
+  </action>
+  <action name="option_Delete_original_file">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>images/delete_original_file_logo.png</normaloff>images/delete_original_file_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete original file</string>
+   </property>
+  </action>
+  <action name="option_New_DB">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/new_DB_logo.png</normaloff>images/new_DB_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>New DB...</string>
+   </property>
+  </action>
+  <action name="option_Feedback">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/feedback_logo.png</normaloff>images/feedback_logo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Feedback</string>
+   </property>
+  </action>
+  <action name="option_not_verified_keep_key_nonce_DB">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>If not decrypted verified, keep key/nonce</string>
+   </property>
+  </action>
+  <action name="option_not_decrypted_verified_keep_original_file">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>If not decrypted verified, keep original file</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>enc_key_input</tabstop>
+  <tabstop>enc_button</tabstop>
+  <tabstop>key_gen_bits</tabstop>
+  <tabstop>dec_key_input</tabstop>
+  <tabstop>dec_nonce_input</tabstop>
+  <tabstop>dec_button</tabstop>
+ </tabstops>
+ <resources>
+  <include location="images/Logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>
