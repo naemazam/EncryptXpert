@@ -57,6 +57,8 @@ To run tests, run the following command
   npm run test
 ```
 
+## ⚠️ Warning: 
+Please note that EncryptXpert may encounter occasional issues with the built-in key database system, leading to database failures. Additionally, file integrity may occasionally be compromised during the encryption or decryption process. While efforts are ongoing to address these issues, users are advised to maintain backups of their encrypted files and exercise caution when relying solely on EncryptXpert for data protection.
 
 ## Used By
 
