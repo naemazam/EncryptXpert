@@ -1,6 +1,12 @@
+<p align="center">
+  <img src="banner_image_url_here" alt="EncryptXpert Banner">
+</p>
 
 # EncryptXpert
-## An app for file encryption/decryption using AES-EAX or AES-GCM algorithms With GUI & CLI support and Build-in Key Database System For Windows Linux and Mac
+
+### An app for file encryption/decryption using AES-EAX or AES-GCM algorithms With GUI & CLI support and Build-in Key Database System For Windows Linux and Mac
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 EncryptXpert is a cutting-edge cybersecurity tool crafted in Python, delivering a comprehensive suite of features for safeguarding sensitive data. With both Graphical User Interface (GUI) and Command-Line Interface (CLI) support, EncryptXpert empowers users to encrypt and decrypt files effortlessly using advanced AES-EAX or AES-GCM algorithms.
 
@@ -8,7 +14,9 @@ This versatile solution ensures robust data protection across Windows and Linux 
 
 For users seeking automation or integration into existing workflows, EncryptXpert's CLI tools offer flexibility and efficiency. Whether encrypting single files or entire directories, EncryptXpert streamlines the encryption process while upholding stringent security standards.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
+
 
 
 ## Demo
