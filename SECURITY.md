@@ -7,7 +7,7 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
+| V 1.0   | :white_check_mark: Windows 10|
 | 5.0.x   | :x:                |
 | 4.0.x   | :white_check_mark: |
 | < 4.0   | :x:                |
@@ -70,3 +70,7 @@ This security policy serves as a foundation for establishing robust security mea
 **12. Policy Review and Updates:**
 
 -   Regularly review and update the EncryptXpert security policy to address emerging threats, technological advancements, and changes in organizational requirements.
+
+## ⚠️ Warning: 
+Please note that EncryptXpert may encounter occasional issues with the built-in key database system, leading to database failures. Additionally, file integrity may occasionally be compromised during the encryption or decryption process. While efforts are ongoing to address these issues, users are advised to maintain backups of their encrypted files and exercise caution when relying solely on EncryptXpert for data protection.
+
