@@ -34,14 +34,39 @@ Insert gif or link to demo
 
 EncryptXpert empowers users to take control of their data security, providing a reliable solution for protecting sensitive information in today's digital landscape. Whether securing personal files or safeguarding corporate assets, EncryptXpert offers a user-friendly and powerful encryption toolkit tailored to meet diverse cybersecurity needs.
 
+# Pre-Requirements
+- Python ( 3.9.0 or Higher )
+- PyQT ( v5 or Higher )
+- 
 
-## Installation
+## Installation  
 
-Install my-project with npm
+### Software Use ( Windows 10/11 )
+
+Download The EXE File 
+
+### Dev Use ( Linux/ Terminal )
+
+Clone The Repo 
+```bash
+  git clone https://github.com/ 
+```
+
+Navigate The Repo 
 
 ```bash
-  npm install my-project
-  cd my-project
+  git clone https://github.com/ 
+```
+
+Install all Required Packages
+
+```bash
+  pip install -r requirements.txt
+```
+Run The Model
+
+```bash
+  Python3 Ex.py
 ```
     
 ## Screenshots
