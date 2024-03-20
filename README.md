@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner_image_url_here" alt="EncryptXpert Banner">
+  <img src="https://github.com/naemazam/EncryptXpert/blob/main/banner.png" alt="EncryptXpert Banner">
 </p>
 
 # EncryptXpert
