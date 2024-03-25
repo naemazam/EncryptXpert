@@ -21,7 +21,9 @@ For users seeking automation or integration into existing workflows, EncryptXper
 
 ## Demo
 
-Insert gif or link to demo
+![Short Demo](https://github.com/naemazam/EncryptXpert/blob/main/Demo/encx.gif)
+
+Watch Full Demo 
 
 
 ## Key Features:
