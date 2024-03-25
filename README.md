@@ -37,7 +37,8 @@ EncryptXpert empowers users to take control of their data security, providing a 
 # Pre-Requirements
 - Python ( 3.9.0 or Higher )
 - PyQT ( v5 or Higher )
-- 
+- psutil
+- pycryptodome
 
 ## Installation  
 
@@ -49,13 +50,13 @@ Download The EXE File
 
 Clone The Repo 
 ```bash
-  git clone https://github.com/ 
+  git clone https://github.com/naemazam/EncryptXpert 
 ```
 
 Navigate The Repo 
 
 ```bash
-  git clone https://github.com/ 
+  cd EncryptXpert
 ```
 
 Install all Required Packages
@@ -66,7 +67,7 @@ Install all Required Packages
 Run The Model
 
 ```bash
-  Python3 Ex.py
+  Python3 EncryptXpert.py
 ```
     
 ## Screenshots
@@ -89,8 +90,8 @@ Please note that EncryptXpert may encounter occasional issues with the built-in 
 
 This project is used by the following companies:
 
-- Company 1
-- Company 2
+- SecureByte
+- CQUPT
 
 
 ## FAQ
