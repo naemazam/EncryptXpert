@@ -16,9 +16,6 @@ For users seeking automation or integration into existing workflows, EncryptXper
 
 
 
-
-
-
 ## Demo
 
 ![Short Demo](https://github.com/naemazam/EncryptXpert/blob/main/Demo/encx.gif)
@@ -72,9 +69,15 @@ Run The Model
   Python3 EncryptXpert.py
 ```
     
-## Screenshots
+## Process 
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/Softwarepic.png)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/DBpic.png)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/db2.png)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/db3.png)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/ancfile.png)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/dec1.png)
+![App Screenshot](https://github.com/naemazam/EncryptXpert/blob/main/images/dec2.png)
 
 
 ## Running Tests
