@@ -110,44 +110,17 @@ Answer 1
 Answer 2
 
 
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
-
 ## Contributing
 
 Contributions are always welcome!
 
 See `contributing.md` for ways to get started.
 
-Please adhere to this project's `code of conduct`.
 
 
 ## 🚀 About Me
-I'm a full stack developer...
+I'm Self-taught Programmer, Security Researcher ,Technophile And an Open-Source Enthusiast, Maintainer and National level hackathon winner🥇 🇨🇳.
+
 
 
 ## License
